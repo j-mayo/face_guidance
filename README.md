@@ -6,8 +6,15 @@
 ------------------
 
 
-사용 폴더: sjy/lora
+사용 폴더: sjy/lora (그대로 쓸 경우)
+or lora 폴더 복사 -> 원하는 곳에서 사용
 
+```shell
+cd sjy/lora
+conda activate ldm4_copy
+```
+
+임시 dataset link: https://drive.google.com/file/d/1Nbc6sNlAdr4ZH85DkA3b5FRE0S_1osKU/view?usp=sharing
 
 train script: 
 train.sh, train_style.sh
@@ -24,7 +31,7 @@ inference.py (기본 lora), inference_faceguide.py (face identity injection을 �
     
 inference_faceguide.py의 경우엔 주석을 약간 달아서 그 부분 읽어보시면 될 것 같고, 역시 다른 inference 파일처럼 model_id, lora weight 등의 부분이 중간 정도에 있어요  
 
-실행은 이렇게 합니다.
+실행:
 ```shell
 CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICE python inference_faceguide.py \
 --lora_path (path of mixed lora weight) \
